@@ -7,11 +7,9 @@ void Counter_Cnt1_init(void);
 
 void Counter_Cnt1_poll(void);
 
-void Counter_Cnt1_setTimeBase(uint16_t ms, char mode);
 
 
 
-void Counter_Cnt1_setEdge(uint8_t edge);
 
 
 

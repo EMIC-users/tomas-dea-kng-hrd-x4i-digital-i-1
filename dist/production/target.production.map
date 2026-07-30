@@ -250,28 +250,28 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200              0x447a          0x66b7  (26295)
-.const                      0x467a                0x12            0x1b  (27)
-.text                       0x468c               0xb1e          0x10ad  (4269)
-.dinit                      0x51aa               0x112           0x19b  (411)
-.text                       0x52bc               0x440           0x660  (1632)
+.const                      0x467a                0x2c            0x42  (66)
+.text                       0x46a6               0xa06           0xf09  (3849)
+.dinit                      0x50ac               0x11e           0x1ad  (429)
+.text                       0x51ca               0x812           0xc1b  (3099)
 
-                 Total "program" memory used (bytes):         0x7f7a  (32634) 49%
+                 Total "program" memory used (bytes):         0x83ca  (33738) 51%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x34  (52)
-.ndata                       0x834                   0             0xa  (10)
-.nbss                        0x83e                   0             0x4  (4)
-.bss                         0x842                   0           0x440  (1088)
-.data                        0xc82                   0            0x8c  (140)
-.bss                         0xd0e                   0            0x18  (24)
-.data                        0xd26                   0            0x20  (32)
-.bss                         0xd46                   0             0x4  (4)
+.nbss                        0x800                   0            0x52  (82)
+.ndata                       0x852                   0             0xa  (10)
+.nbss                        0x85c                   0             0x2  (2)
+.bss                         0x85e                   0           0x440  (1088)
+.data                        0xc9e                   0            0x8c  (140)
+.bss                         0xd2a                   0            0x18  (24)
+.data                        0xd42                   0            0x20  (32)
+.bss                         0xd62                   0             0x4  (4)
 
-                 Total "data" memory used (bytes):          0x54a  (1354) 16%
+                 Total "data" memory used (bytes):          0x566  (1382) 16%
 
 
 Dynamic Memory Usage
@@ -279,36 +279,34 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xd4a                              0x1ab6  (6838)
+stack                        0xd66                              0x1a9a  (6810)
 
-                 Maximum dynamic memory (bytes):         0x1ab6  (6838)
+                 Maximum dynamic memory (bytes):         0x1a9a  (6810)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
 
 External Symbols in Data Memory (by address):
 
-                    0x082e                  _i2crfi_estado
-                    0x082f                  _i2crfi_estado_rcv
-                    0x0830                  _i2crfi_indice
-                    0x0831                  _stopflag
-                    0x083c                  _I2C_ID
-                    0x083e                  _rpm
-                    0x0c82                  _i2c2InStream
-                    0x0c9e                  _i2c2OutStream
-                    0x0d46                  ___errno_val
+                    0x084c                  _i2crfi_estado
+                    0x084d                  _i2crfi_estado_rcv
+                    0x084e                  _i2crfi_indice
+                    0x084f                  _stopflag
+                    0x085a                  _I2C_ID
+                    0x0c9e                  _i2c2InStream
+                    0x0cba                  _i2c2OutStream
+                    0x0d62                  ___errno_val
 
 External Symbols in Data Memory (by name):
 
-                    0x083c                  _I2C_ID
-                    0x0d46                  ___errno_val
-                    0x0c82                  _i2c2InStream
-                    0x0c9e                  _i2c2OutStream
-                    0x082e                  _i2crfi_estado
-                    0x082f                  _i2crfi_estado_rcv
-                    0x0830                  _i2crfi_indice
-                    0x083e                  _rpm
-                    0x0831                  _stopflag
+                    0x085a                  _I2C_ID
+                    0x0d62                  ___errno_val
+                    0x0c9e                  _i2c2InStream
+                    0x0cba                  _i2c2OutStream
+                    0x084c                  _i2crfi_estado
+                    0x084d                  _i2crfi_estado_rcv
+                    0x084e                  _i2crfi_indice
+                    0x084f                  _stopflag
 
 External Symbols in Program Memory (by address):
 
@@ -433,139 +431,170 @@ External Symbols in Program Memory (by address):
                   0x00429a                  _fmodl
                   0x0045c6                  _scalbnf
                   0x00461a                  _scalbnl
-                  0x004684                  _streamIn_I2C
-                  0x004688                  _streamOut_I2C
-                  0x00468c                  _streamIn_t_ptr_to_float
-                  0x0046c8                  _streamIn_t_ptr_to_char
-                  0x004702                  _streamIn_t_ptr_to_uint8_t
-                  0x004740                  _streamIn_t_ptr_to_uint16_t
-                  0x00477c                  _streamIn_t_ptr_to_uint32_t
-                  0x0047b8                  _streamIn_t_ptr_to_uint64_t
-                  0x0047f4                  _streamIn_t_ptr_to_int8_t
-                  0x004832                  _streamIn_t_ptr_to_int16_t
-                  0x00486e                  _streamIn_t_ptr_to_int32_t
-                  0x0048aa                  _streamIn_t_ptr_to_int64_t
-                  0x0048e6                  _streamIn_t_ptr_to_ascii
-                  0x004926                  _sendDataToStream
-                  0x004c42                  _Init_I2C_Driver
-                  0x004c4e                  _getAvailable_out_count
-                  0x004c62                  _countI2cStreamIn
-                  0x004c6a                  _getI2cStreamIn
-                  0x004c72                  _setI2cStreamOut
-                  0x004c7e                  _I2C_Begin_Transmision
-                  0x004c98                  _ini_I2C_IN
-                  0x004cc2                  _ini_I2C_OUT
-                  0x004cec                  _ini_I2C_OUT_FM
-                  0x004cf6                  _reset_I2C_FRAME
-                  0x004d04                  _push_I2C_IN
-                  0x004d3c                  _push_I2C_OUT
-                  0x004d6c                  _pop_I2C_IN
-                  0x004d90                  _pop_I2C_OUT
-                  0x004db4                  _pop_I2C_OUT_FM
-                  0x004dc4                  _i2cCloseWriteFrame
-                  0x004e06                  _i2cOpenReadFrame
-                  0x004e52                  _I2c_driver_callback_slave
-                  0x004e92                  _I2c_driver_callback_master
-                  0x004f02                  _streamPushCtr
-                  0x004f50                  _streamPush
-                  0x004f8a                  _streamPop
-                  0x004fc2                  _streamOpenWriteFrame
-                  0x005004                  _streamOpenReadFrame
-                  0x005050                  _streamReOpenReadFrame
-                  0x005068                  _streamCloseReadFrame
-                  0x005092                  _ICN_addChannel
-                  0x005116                  _ICN_setEdge
-                  0x00512e                  _ICN_get
-                  0x005154                  _ICN_getAndClear
-                  0x005188                  _ICN_clear
-                  0x0052bc                  _Init_Master_I2C2
-                  0x005324                  _CollisionReset_I2C2
-                  0x00532c                  _OverflowReset_I2C2
-                  0x005334                  _IsStartI2c2
-                  0x005340                  _IsCollisionDetectI2c2
-                  0x00534c                  _IsStopI2c2
-                  0x005358                  _IsReceiveBufferFullI2c2
-                  0x005364                  _IsDataOrAddressI2c2
-                  0x005370                  _IsReceiveOverflowI2c2
-                  0x00537c                  _Start_I2C2
-                  0x00538e                  _Stop_I2C2
-                  0x0053a0                  _Write_I2C2
-                  0x0053ac                  _Read_I2C2
-                  0x0053c0                  _pI2C
-                  0x0053dc                  _pI2C_ctrl
-                  0x0053f8                  _pI2C_boot
-                  0x005418                  _EMICBus_init
-                  0x005426                  _poll_EMICBus
-                  0x0054c2                  _Counter_Cnt1_init
-                  0x0054d4                  _Counter_Cnt1_poll
-                  0x005516                  _Counter_Cnt2_init
-                  0x005528                  _Counter_Cnt2_poll
-                  0x005568                  _Counter_Cnt3_init
-                  0x00557a                  _Counter_Cnt3_poll
-                  0x0055ba                  _Counter_Cnt4_init
-                  0x0055cc                  _Counter_Cnt4_poll
-                  0x00560c                  _init_digIn
-                  0x00561a                  _ReadDigiIn1
-                  0x005626                  _ReadDigiIn2
-                  0x005632                  _ReadDigiIn3
-                  0x00563e                  _ReadDigiIn4
-                  0x00564a                  _digInPoll
-                  0x005650                  _initSystem
-                  0x00565e                  _main
-                  0x005688                  _getSystemMilis
-                  0x005692                  _callback
-                  0x0056a4                  _systemTimeInit
-                  0x0056ae                  _timer4_init
-                  0x0056c4                  _Counter_Cnt1_onTimeBase
-                  0x0056d4                  _LEDs_Status_init
-                  0x0056dc                  _LEDs_Led2_init
-                  0x0056e4                  _LEDs_Led3_init
-                  0x0056ec                  _LEDs_Led4_init
-                  0x0056f4                  _LEDs_Led5_init
+                  0x00469e                  _streamIn_I2C
+                  0x0046a2                  _streamOut_I2C
+                  0x0046a6                  _streamIn_t_ptr_to_float
+                  0x0046e2                  _streamIn_t_ptr_to_char
+                  0x00471c                  _streamIn_t_ptr_to_uint8_t
+                  0x00475a                  _streamIn_t_ptr_to_uint16_t
+                  0x004796                  _streamIn_t_ptr_to_uint32_t
+                  0x0047d2                  _streamIn_t_ptr_to_uint64_t
+                  0x00480e                  _streamIn_t_ptr_to_int8_t
+                  0x00484c                  _streamIn_t_ptr_to_int16_t
+                  0x004888                  _streamIn_t_ptr_to_int32_t
+                  0x0048c4                  _streamIn_t_ptr_to_int64_t
+                  0x004900                  _streamIn_t_ptr_to_ascii
+                  0x004940                  _sendDataToStream
+                  0x004c5c                  _Init_I2C_Driver
+                  0x004c68                  _getAvailable_out_count
+                  0x004c7c                  _countI2cStreamIn
+                  0x004c84                  _getI2cStreamIn
+                  0x004c8c                  _setI2cStreamOut
+                  0x004c98                  _I2C_Begin_Transmision
+                  0x004cb2                  _ini_I2C_IN
+                  0x004cdc                  _ini_I2C_OUT
+                  0x004d06                  _ini_I2C_OUT_FM
+                  0x004d10                  _reset_I2C_FRAME
+                  0x004d1e                  _push_I2C_IN
+                  0x004d56                  _push_I2C_OUT
+                  0x004d86                  _pop_I2C_IN
+                  0x004daa                  _pop_I2C_OUT
+                  0x004dce                  _pop_I2C_OUT_FM
+                  0x004dde                  _i2cCloseWriteFrame
+                  0x004e20                  _i2cOpenReadFrame
+                  0x004e6c                  _I2c_driver_callback_slave
+                  0x004eac                  _I2c_driver_callback_master
+                  0x004f1c                  _streamPushCtr
+                  0x004f6a                  _streamPush
+                  0x004fa4                  _streamPop
+                  0x004fdc                  _streamOpenWriteFrame
+                  0x00501e                  _streamOpenReadFrame
+                  0x00506a                  _streamReOpenReadFrame
+                  0x005082                  _streamCloseReadFrame
+                  0x0051ca                  _ICN_addChannel
+                  0x00524e                  _ICN_setEdge
+                  0x005266                  _ICN_get
+                  0x00528c                  _ICN_getAndClear
+                  0x0052c0                  _ICN_clear
+                  0x0052e2                  _Init_Master_I2C2
+                  0x00534a                  _CollisionReset_I2C2
+                  0x005352                  _OverflowReset_I2C2
+                  0x00535a                  _IsStartI2c2
+                  0x005366                  _IsCollisionDetectI2c2
+                  0x005372                  _IsStopI2c2
+                  0x00537e                  _IsReceiveBufferFullI2c2
+                  0x00538a                  _IsDataOrAddressI2c2
+                  0x005396                  _IsReceiveOverflowI2c2
+                  0x0053a2                  _Start_I2C2
+                  0x0053b4                  _Stop_I2C2
+                  0x0053c6                  _Write_I2C2
+                  0x0053d2                  _Read_I2C2
+                  0x0053e6                  _pI2C
+                  0x005402                  _pI2C_ctrl
+                  0x00541e                  _pI2C_boot
+                  0x00543e                  _EMICBus_init
+                  0x00544c                  _poll_EMICBus
+                  0x0054e8                  _LEDs_Led2_init
+                  0x0054f0                  _LEDs_Led2_blink
+                  0x005510                  _LEDs_Led2_poll
+                  0x00556e                  _LEDs_Led3_init
+                  0x005576                  _LEDs_Led3_blink
+                  0x005596                  _LEDs_Led3_poll
+                  0x0055f4                  _LEDs_Led4_init
+                  0x0055fc                  _LEDs_Led4_blink
+                  0x00561c                  _LEDs_Led4_poll
+                  0x00567a                  _Counter_Cnt1_init
+                  0x00568c                  _Counter_Cnt1_setTimeBase
+                  0x0056ae                  _Counter_Cnt1_setEdge
+                  0x0056bc                  _Counter_Cnt1_poll
+                  0x0056fe                  _Counter_Cnt2_init
+                  0x005710                  _Counter_Cnt2_setTimeBase
+                  0x005732                  _Counter_Cnt2_setEdge
+                  0x005740                  _Counter_Cnt2_poll
+                  0x005782                  _Counter_Cnt3_init
+                  0x005794                  _Counter_Cnt3_setTimeBase
+                  0x0057b6                  _Counter_Cnt3_setEdge
+                  0x0057c4                  _Counter_Cnt3_poll
+                  0x005806                  _onReset
+                  0x005836                  _Counter_Cnt1_onTimeBase
+                  0x005852                  _Counter_Cnt2_onTimeBase
+                  0x00586e                  _Counter_Cnt3_onTimeBase
+                  0x00588a                  _Counter_Cnt4_init
+                  0x00589c                  _Counter_Cnt4_poll
+                  0x0058dc                  _init_digIn
+                  0x0058ea                  _ReadDigiIn1
+                  0x0058f6                  _ReadDigiIn2
+                  0x005902                  _ReadDigiIn3
+                  0x00590e                  _ReadDigiIn4
+                  0x00591a                  _digInPoll
+                  0x005920                  _initSystem
+                  0x00592e                  _main
+                  0x005960                  _LEDs_Status_init
+                  0x005968                  _LEDs_Status_state
+                  0x005998                  _getSystemMilis
+                  0x0059a2                  _callback
+                  0x0059b4                  _systemTimeInit
+                  0x0059be                  _timer4_init
+                  0x0059d4                  _LEDs_Led5_init
 
 External Symbols in Program Memory (by name):
 
-                  0x005324                  _CollisionReset_I2C2
-                  0x0054c2                  _Counter_Cnt1_init
-                  0x0056c4                  _Counter_Cnt1_onTimeBase
-                  0x0054d4                  _Counter_Cnt1_poll
-                  0x005516                  _Counter_Cnt2_init
-                  0x005528                  _Counter_Cnt2_poll
-                  0x005568                  _Counter_Cnt3_init
-                  0x00557a                  _Counter_Cnt3_poll
-                  0x0055ba                  _Counter_Cnt4_init
-                  0x0055cc                  _Counter_Cnt4_poll
-                  0x005418                  _EMICBus_init
-                  0x004c7e                  _I2C_Begin_Transmision
-                  0x004e92                  _I2c_driver_callback_master
-                  0x004e52                  _I2c_driver_callback_slave
-                  0x005092                  _ICN_addChannel
-                  0x005188                  _ICN_clear
-                  0x00512e                  _ICN_get
-                  0x005154                  _ICN_getAndClear
-                  0x005116                  _ICN_setEdge
-                  0x004c42                  _Init_I2C_Driver
-                  0x0052bc                  _Init_Master_I2C2
-                  0x005340                  _IsCollisionDetectI2c2
-                  0x005364                  _IsDataOrAddressI2c2
-                  0x005358                  _IsReceiveBufferFullI2c2
-                  0x005370                  _IsReceiveOverflowI2c2
-                  0x005334                  _IsStartI2c2
-                  0x00534c                  _IsStopI2c2
-                  0x0056dc                  _LEDs_Led2_init
-                  0x0056e4                  _LEDs_Led3_init
-                  0x0056ec                  _LEDs_Led4_init
-                  0x0056f4                  _LEDs_Led5_init
-                  0x0056d4                  _LEDs_Status_init
-                  0x00532c                  _OverflowReset_I2C2
-                  0x00561a                  _ReadDigiIn1
-                  0x005626                  _ReadDigiIn2
-                  0x005632                  _ReadDigiIn3
-                  0x00563e                  _ReadDigiIn4
-                  0x0053ac                  _Read_I2C2
-                  0x00537c                  _Start_I2C2
-                  0x00538e                  _Stop_I2C2
-                  0x0053a0                  _Write_I2C2
+                  0x00534a                  _CollisionReset_I2C2
+                  0x00567a                  _Counter_Cnt1_init
+                  0x005836                  _Counter_Cnt1_onTimeBase
+                  0x0056bc                  _Counter_Cnt1_poll
+                  0x0056ae                  _Counter_Cnt1_setEdge
+                  0x00568c                  _Counter_Cnt1_setTimeBase
+                  0x0056fe                  _Counter_Cnt2_init
+                  0x005852                  _Counter_Cnt2_onTimeBase
+                  0x005740                  _Counter_Cnt2_poll
+                  0x005732                  _Counter_Cnt2_setEdge
+                  0x005710                  _Counter_Cnt2_setTimeBase
+                  0x005782                  _Counter_Cnt3_init
+                  0x00586e                  _Counter_Cnt3_onTimeBase
+                  0x0057c4                  _Counter_Cnt3_poll
+                  0x0057b6                  _Counter_Cnt3_setEdge
+                  0x005794                  _Counter_Cnt3_setTimeBase
+                  0x00588a                  _Counter_Cnt4_init
+                  0x00589c                  _Counter_Cnt4_poll
+                  0x00543e                  _EMICBus_init
+                  0x004c98                  _I2C_Begin_Transmision
+                  0x004eac                  _I2c_driver_callback_master
+                  0x004e6c                  _I2c_driver_callback_slave
+                  0x0051ca                  _ICN_addChannel
+                  0x0052c0                  _ICN_clear
+                  0x005266                  _ICN_get
+                  0x00528c                  _ICN_getAndClear
+                  0x00524e                  _ICN_setEdge
+                  0x004c5c                  _Init_I2C_Driver
+                  0x0052e2                  _Init_Master_I2C2
+                  0x005366                  _IsCollisionDetectI2c2
+                  0x00538a                  _IsDataOrAddressI2c2
+                  0x00537e                  _IsReceiveBufferFullI2c2
+                  0x005396                  _IsReceiveOverflowI2c2
+                  0x00535a                  _IsStartI2c2
+                  0x005372                  _IsStopI2c2
+                  0x0054f0                  _LEDs_Led2_blink
+                  0x0054e8                  _LEDs_Led2_init
+                  0x005510                  _LEDs_Led2_poll
+                  0x005576                  _LEDs_Led3_blink
+                  0x00556e                  _LEDs_Led3_init
+                  0x005596                  _LEDs_Led3_poll
+                  0x0055fc                  _LEDs_Led4_blink
+                  0x0055f4                  _LEDs_Led4_init
+                  0x00561c                  _LEDs_Led4_poll
+                  0x0059d4                  _LEDs_Led5_init
+                  0x005960                  _LEDs_Status_init
+                  0x005968                  _LEDs_Status_state
+                  0x005352                  _OverflowReset_I2C2
+                  0x0058ea                  _ReadDigiIn1
+                  0x0058f6                  _ReadDigiIn2
+                  0x005902                  _ReadDigiIn3
+                  0x00590e                  _ReadDigiIn4
+                  0x0053d2                  _Read_I2C2
+                  0x0053a2                  _Start_I2C2
+                  0x0053b4                  _Stop_I2C2
+                  0x0053c6                  _Write_I2C2
                   0x000304                  __CNInterrupt
                   0x0003e8                  __DefaultInterrupt
                   0x0003c2                  __MI2C2Interrupt
@@ -669,68 +698,69 @@ External Symbols in Program Memory (by name):
                   0x000a54                  _atoi
                   0x000ab4                  _atol
                   0x000b1c                  _atoll
-                  0x005692                  _callback
+                  0x0059a2                  _callback
                   0x004156                  _copysignl
-                  0x004c62                  _countI2cStreamIn
-                  0x00564a                  _digInPoll
+                  0x004c7c                  _countI2cStreamIn
+                  0x00591a                  _digInPoll
                   0x00418a                  _fabsl
                   0x0041a0                  _floorl
                   0x00429a                  _fmodl
-                  0x004c4e                  _getAvailable_out_count
-                  0x004c6a                  _getI2cStreamIn
-                  0x005688                  _getSystemMilis
-                  0x004dc4                  _i2cCloseWriteFrame
-                  0x004e06                  _i2cOpenReadFrame
-                  0x004c98                  _ini_I2C_IN
-                  0x004cc2                  _ini_I2C_OUT
-                  0x004cec                  _ini_I2C_OUT_FM
-                  0x005650                  _initSystem
-                  0x00560c                  _init_digIn
-                  0x00565e                  _main
+                  0x004c68                  _getAvailable_out_count
+                  0x004c84                  _getI2cStreamIn
+                  0x005998                  _getSystemMilis
+                  0x004dde                  _i2cCloseWriteFrame
+                  0x004e20                  _i2cOpenReadFrame
+                  0x004cb2                  _ini_I2C_IN
+                  0x004cdc                  _ini_I2C_OUT
+                  0x004d06                  _ini_I2C_OUT_FM
+                  0x005920                  _initSystem
+                  0x0058dc                  _init_digIn
+                  0x00592e                  _main
                   0x0025ec                  _memcpy
                   0x000b80                  _memset
-                  0x0053c0                  _pI2C
-                  0x0053f8                  _pI2C_boot
-                  0x0053dc                  _pI2C_ctrl
-                  0x005426                  _poll_EMICBus
-                  0x004d6c                  _pop_I2C_IN
-                  0x004d90                  _pop_I2C_OUT
-                  0x004db4                  _pop_I2C_OUT_FM
-                  0x004d04                  _push_I2C_IN
-                  0x004d3c                  _push_I2C_OUT
-                  0x004cf6                  _reset_I2C_FRAME
+                  0x005806                  _onReset
+                  0x0053e6                  _pI2C
+                  0x00541e                  _pI2C_boot
+                  0x005402                  _pI2C_ctrl
+                  0x00544c                  _poll_EMICBus
+                  0x004d86                  _pop_I2C_IN
+                  0x004daa                  _pop_I2C_OUT
+                  0x004dce                  _pop_I2C_OUT_FM
+                  0x004d1e                  _push_I2C_IN
+                  0x004d56                  _push_I2C_OUT
+                  0x004d10                  _reset_I2C_FRAME
                   0x0045c6                  _scalbnf
                   0x00461a                  _scalbnl
-                  0x004926                  _sendDataToStream
-                  0x004c72                  _setI2cStreamOut
+                  0x004940                  _sendDataToStream
+                  0x004c8c                  _setI2cStreamOut
                   0x000c48                  _snprintf
                   0x003532                  _strcpy
-                  0x005068                  _streamCloseReadFrame
-                  0x004684                  _streamIn_I2C
-                  0x0048e6                  _streamIn_t_ptr_to_ascii
-                  0x0046c8                  _streamIn_t_ptr_to_char
-                  0x00468c                  _streamIn_t_ptr_to_float
-                  0x004832                  _streamIn_t_ptr_to_int16_t
-                  0x00486e                  _streamIn_t_ptr_to_int32_t
-                  0x0048aa                  _streamIn_t_ptr_to_int64_t
-                  0x0047f4                  _streamIn_t_ptr_to_int8_t
-                  0x004740                  _streamIn_t_ptr_to_uint16_t
-                  0x00477c                  _streamIn_t_ptr_to_uint32_t
-                  0x0047b8                  _streamIn_t_ptr_to_uint64_t
-                  0x004702                  _streamIn_t_ptr_to_uint8_t
-                  0x005004                  _streamOpenReadFrame
-                  0x004fc2                  _streamOpenWriteFrame
-                  0x004688                  _streamOut_I2C
-                  0x004f8a                  _streamPop
-                  0x004f50                  _streamPush
-                  0x004f02                  _streamPushCtr
-                  0x005050                  _streamReOpenReadFrame
+                  0x005082                  _streamCloseReadFrame
+                  0x00469e                  _streamIn_I2C
+                  0x004900                  _streamIn_t_ptr_to_ascii
+                  0x0046e2                  _streamIn_t_ptr_to_char
+                  0x0046a6                  _streamIn_t_ptr_to_float
+                  0x00484c                  _streamIn_t_ptr_to_int16_t
+                  0x004888                  _streamIn_t_ptr_to_int32_t
+                  0x0048c4                  _streamIn_t_ptr_to_int64_t
+                  0x00480e                  _streamIn_t_ptr_to_int8_t
+                  0x00475a                  _streamIn_t_ptr_to_uint16_t
+                  0x004796                  _streamIn_t_ptr_to_uint32_t
+                  0x0047d2                  _streamIn_t_ptr_to_uint64_t
+                  0x00471c                  _streamIn_t_ptr_to_uint8_t
+                  0x00501e                  _streamOpenReadFrame
+                  0x004fdc                  _streamOpenWriteFrame
+                  0x0046a2                  _streamOut_I2C
+                  0x004fa4                  _streamPop
+                  0x004f6a                  _streamPush
+                  0x004f1c                  _streamPushCtr
+                  0x00506a                  _streamReOpenReadFrame
                   0x0025fa                  _strlen
                   0x000cb2                  _strtod
                   0x000cac                  _strtof
                   0x000cb8                  _strtold
-                  0x0056a4                  _systemTimeInit
-                  0x0056ae                  _timer4_init
+                  0x0059b4                  _systemTimeInit
+                  0x0059be                  _timer4_init
                   0x00262a                  _tolower
                   0x003540                  _toupper
                   0x00206c                  _vfprintf
@@ -2162,58 +2192,59 @@ __c30_signature
 
 __xc_reference_data
 
-.nbss               0x0800         0x34
- .nbss              0x0800          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
- .nbss              0x080a          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
- .nbss              0x0812          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
- .nbss              0x081a          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
- .nbss              0x0822          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
- .nbss              0x082a          0x4 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/systemTimer.o
- .nbss              0x082e          0x4 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
-                    0x082e                  _i2crfi_estado
-                    0x082f                  _i2crfi_estado_rcv
-                    0x0830                  _i2crfi_indice
-                    0x0831                  _stopflag
- .nbss              0x0832          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/timer.o
+.nbss               0x0800         0x52
+ .nbss              0x0800          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led2.o
+ .nbss              0x080a          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led3.o
+ .nbss              0x0814          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led4.o
+ .nbss              0x081e          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
+ .nbss              0x0828          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
+ .nbss              0x0830          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
+ .nbss              0x0838          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
+ .nbss              0x0840          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
+ .nbss              0x0848          0x4 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/systemTimer.o
+ .nbss              0x084c          0x4 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+                    0x084c                  _i2crfi_estado
+                    0x084d                  _i2crfi_estado_rcv
+                    0x084e                  _i2crfi_indice
+                    0x084f                  _stopflag
+ .nbss              0x0850          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/timer.o
 
-.ndata              0x0834          0xa
- .ndata             0x0834          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
- .ndata             0x0836          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
- .ndata             0x0838          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
- .ndata             0x083a          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
- .ndata             0x083c          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
-                    0x083c                  _I2C_ID
+.ndata              0x0852          0xa
+ .ndata             0x0852          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
+ .ndata             0x0854          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
+ .ndata             0x0856          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
+ .ndata             0x0858          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
+ .ndata             0x085a          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+                    0x085a                  _I2C_ID
 
-.nbss               0x083e          0x4
- .nbss              0x083e          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/userFncFile.o
-                    0x083e                  _rpm
- .nbss              0x0840          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(errno.XX_o)
-                    0x0840                  _errno
+.nbss               0x085c          0x2
+ .nbss              0x085c          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(errno.XX_o)
+                    0x085c                  _errno
 
-.bss                0x0842        0x440
- .bss               0x0842        0x440 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+.bss                0x085e        0x440
+ .bss               0x085e        0x440 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
 
-.data               0x0c82         0x8c
- .data              0x0c82         0x38 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
-                    0x0c82                  _i2c2InStream
-                    0x0c9e                  _i2c2OutStream
- .data              0x0cba         0x36 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(floatscan.XX_o)
- .data              0x0cf0         0x1e /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__printf_core.XX_o)
+.data               0x0c9e         0x8c
+ .data              0x0c9e         0x38 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+                    0x0c9e                  _i2c2InStream
+                    0x0cba                  _i2c2OutStream
+ .data              0x0cd6         0x36 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(floatscan.XX_o)
+ .data              0x0d0c         0x1e /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__printf_core.XX_o)
 
-.bss                0x0d0e         0x18
- .bss               0x0d0e         0x18 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
+.bss                0x0d2a         0x18
+ .bss               0x0d2a         0x18 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
 
-.data               0x0d26         0x20
- .data              0x0d26         0x10 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__fmt_a.XX_o)
- .data              0x0d36         0x10 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__fmt_fp.XX_o)
+.data               0x0d42         0x20
+ .data              0x0d42         0x10 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__fmt_a.XX_o)
+ .data              0x0d52         0x10 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__fmt_fp.XX_o)
 
-.bss                0x0d46          0x4
- .bss               0x0d46          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__errno_location.XX_o)
-                    0x0d46                  ___errno_val
- .bss               0x0d48          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__stdio_exit.XX_o)
-                    0x0d48                  ___stderr_used
-                    0x0d48                  ___stdin_used
-                    0x0d48                  ___stdout_used
+.bss                0x0d62          0x4
+ .bss               0x0d62          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__errno_location.XX_o)
+                    0x0d62                  ___errno_val
+ .bss               0x0d64          0x2 /opt/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a(__stdio_exit.XX_o)
+                    0x0d64                  ___stderr_used
+                    0x0d64                  ___stdin_used
+                    0x0d64                  ___stdout_used
 
 .ivt._T4Interrupt
                   0x00004a          0x2
@@ -2242,122 +2273,138 @@ __xc_reference_data
 .config_IESO      0x00abfc          0x2
  .config_IESO     0x00abfc          0x2 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/main.o
 
-.const              0xc67a         0x12 load address 0x00467a  
- .const             0xc67a          0xa /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/userFncFile.o
- .const             0xc684          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
-                    0xc684                  _streamIn_I2C
-                    0xc688                  _streamOut_I2C
+.const              0xc67a         0x2c load address 0x00467a  
+ .const             0xc67a         0x24 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/userFncFile.o
+ .const             0xc69e          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+                    0xc69e                  _streamIn_I2C
+                    0xc6a2                  _streamOut_I2C
 
-.text             0x00468c        0xb1e
- .text            0x00468c        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/streamIn.o
-                  0x00468c                  _streamIn_t_ptr_to_float
-                  0x0046c8                  _streamIn_t_ptr_to_char
-                  0x004702                  _streamIn_t_ptr_to_uint8_t
-                  0x004740                  _streamIn_t_ptr_to_uint16_t
-                  0x00477c                  _streamIn_t_ptr_to_uint32_t
-                  0x0047b8                  _streamIn_t_ptr_to_uint64_t
-                  0x0047f4                  _streamIn_t_ptr_to_int8_t
-                  0x004832                  _streamIn_t_ptr_to_int16_t
-                  0x00486e                  _streamIn_t_ptr_to_int32_t
-                  0x0048aa                  _streamIn_t_ptr_to_int64_t
-                  0x0048e6                  _streamIn_t_ptr_to_ascii
-                  0x004926                  _sendDataToStream
- .text            0x004c42        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
-                  0x004c42                  _Init_I2C_Driver
-                  0x004c4e                  _getAvailable_out_count
-                  0x004c62                  _countI2cStreamIn
-                  0x004c6a                  _getI2cStreamIn
-                  0x004c72                  _setI2cStreamOut
-                  0x004c7e                  _I2C_Begin_Transmision
-                  0x004c98                  _ini_I2C_IN
-                  0x004cc2                  _ini_I2C_OUT
-                  0x004cec                  _ini_I2C_OUT_FM
-                  0x004cf6                  _reset_I2C_FRAME
-                  0x004d04                  _push_I2C_IN
-                  0x004d3c                  _push_I2C_OUT
-                  0x004d6c                  _pop_I2C_IN
-                  0x004d90                  _pop_I2C_OUT
-                  0x004db4                  _pop_I2C_OUT_FM
-                  0x004dc4                  _i2cCloseWriteFrame
-                  0x004e06                  _i2cOpenReadFrame
-                  0x004e52                  _I2c_driver_callback_slave
-                  0x004e92                  _I2c_driver_callback_master
- .text            0x004f02        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/stream.o
-                  0x004f02                  _streamPushCtr
-                  0x004f50                  _streamPush
-                  0x004f8a                  _streamPop
-                  0x004fc2                  _streamOpenWriteFrame
-                  0x005004                  _streamOpenReadFrame
-                  0x005050                  _streamReOpenReadFrame
-                  0x005068                  _streamCloseReadFrame
- .text            0x005092        0x118 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
-                  0x005092                  _ICN_addChannel
-                  0x005116                  _ICN_setEdge
-                  0x00512e                  _ICN_get
-                  0x005154                  _ICN_getAndClear
-                  0x005188                  _ICN_clear
+.text             0x0046a6        0xa06
+ .text            0x0046a6        0x5b6 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/streamIn.o
+                  0x0046a6                  _streamIn_t_ptr_to_float
+                  0x0046e2                  _streamIn_t_ptr_to_char
+                  0x00471c                  _streamIn_t_ptr_to_uint8_t
+                  0x00475a                  _streamIn_t_ptr_to_uint16_t
+                  0x004796                  _streamIn_t_ptr_to_uint32_t
+                  0x0047d2                  _streamIn_t_ptr_to_uint64_t
+                  0x00480e                  _streamIn_t_ptr_to_int8_t
+                  0x00484c                  _streamIn_t_ptr_to_int16_t
+                  0x004888                  _streamIn_t_ptr_to_int32_t
+                  0x0048c4                  _streamIn_t_ptr_to_int64_t
+                  0x004900                  _streamIn_t_ptr_to_ascii
+                  0x004940                  _sendDataToStream
+ .text            0x004c5c        0x2c0 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2_driver.o
+                  0x004c5c                  _Init_I2C_Driver
+                  0x004c68                  _getAvailable_out_count
+                  0x004c7c                  _countI2cStreamIn
+                  0x004c84                  _getI2cStreamIn
+                  0x004c8c                  _setI2cStreamOut
+                  0x004c98                  _I2C_Begin_Transmision
+                  0x004cb2                  _ini_I2C_IN
+                  0x004cdc                  _ini_I2C_OUT
+                  0x004d06                  _ini_I2C_OUT_FM
+                  0x004d10                  _reset_I2C_FRAME
+                  0x004d1e                  _push_I2C_IN
+                  0x004d56                  _push_I2C_OUT
+                  0x004d86                  _pop_I2C_IN
+                  0x004daa                  _pop_I2C_OUT
+                  0x004dce                  _pop_I2C_OUT_FM
+                  0x004dde                  _i2cCloseWriteFrame
+                  0x004e20                  _i2cOpenReadFrame
+                  0x004e6c                  _I2c_driver_callback_slave
+                  0x004eac                  _I2c_driver_callback_master
+ .text            0x004f1c        0x190 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/stream.o
+                  0x004f1c                  _streamPushCtr
+                  0x004f6a                  _streamPush
+                  0x004fa4                  _streamPop
+                  0x004fdc                  _streamOpenWriteFrame
+                  0x00501e                  _streamOpenReadFrame
+                  0x00506a                  _streamReOpenReadFrame
+                  0x005082                  _streamCloseReadFrame
 
-.dinit            0x0051aa        0x112
- .dinit           0x0051aa        0x112 data_init
+.dinit            0x0050ac        0x11e
+ .dinit           0x0050ac        0x11e data_init
 
-.text             0x0052bc        0x440
- .text            0x0052bc        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2.o
-                  0x0052bc                  _Init_Master_I2C2
-                  0x005324                  _CollisionReset_I2C2
-                  0x00532c                  _OverflowReset_I2C2
-                  0x005334                  _IsStartI2c2
-                  0x005340                  _IsCollisionDetectI2c2
-                  0x00534c                  _IsStopI2c2
-                  0x005358                  _IsReceiveBufferFullI2c2
-                  0x005364                  _IsDataOrAddressI2c2
-                  0x005370                  _IsReceiveOverflowI2c2
-                  0x00537c                  _Start_I2C2
-                  0x00538e                  _Stop_I2C2
-                  0x0053a0                  _Write_I2C2
-                  0x0053ac                  _Read_I2C2
- .text            0x0053c0        0x102 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/EMICBus.o
-                  0x0053c0                  _pI2C
-                  0x0053dc                  _pI2C_ctrl
-                  0x0053f8                  _pI2C_boot
-                  0x005418                  _EMICBus_init
-                  0x005426                  _poll_EMICBus
- .text            0x0054c2         0x54 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
-                  0x0054c2                  _Counter_Cnt1_init
-                  0x0054d4                  _Counter_Cnt1_poll
- .text            0x005516         0x52 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
-                  0x005516                  _Counter_Cnt2_init
-                  0x005528                  _Counter_Cnt2_poll
- .text            0x005568         0x52 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
-                  0x005568                  _Counter_Cnt3_init
-                  0x00557a                  _Counter_Cnt3_poll
- .text            0x0055ba         0x52 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
-                  0x0055ba                  _Counter_Cnt4_init
-                  0x0055cc                  _Counter_Cnt4_poll
- .text            0x00560c         0x44 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Digital.o
-                  0x00560c                  _init_digIn
-                  0x00561a                  _ReadDigiIn1
-                  0x005626                  _ReadDigiIn2
-                  0x005632                  _ReadDigiIn3
-                  0x00563e                  _ReadDigiIn4
-                  0x00564a                  _digInPoll
- .text            0x005650         0x38 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/main.o
-                  0x005650                  _initSystem
-                  0x00565e                  _main
- .text            0x005688         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/systemTimer.o
-                  0x005688                  _getSystemMilis
-                  0x005692                  _callback
-                  0x0056a4                  _systemTimeInit
- .text            0x0056ae         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/timer.o
-                  0x0056ae                  _timer4_init
- .text            0x0056c4         0x10 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/userFncFile.o
-                  0x0056c4                  _Counter_Cnt1_onTimeBase
- .text            0x0056d4          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Status.o
-                  0x0056d4                  _LEDs_Status_init
- .text            0x0056dc          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led2.o
-                  0x0056dc                  _LEDs_Led2_init
- .text            0x0056e4          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led3.o
-                  0x0056e4                  _LEDs_Led3_init
- .text            0x0056ec          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led4.o
-                  0x0056ec                  _LEDs_Led4_init
- .text            0x0056f4          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led5.o
-                  0x0056f4                  _LEDs_Led5_init
+.text             0x0051ca        0x812
+ .text            0x0051ca        0x118 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/INP_CHAN_NOTI.o
+                  0x0051ca                  _ICN_addChannel
+                  0x00524e                  _ICN_setEdge
+                  0x005266                  _ICN_get
+                  0x00528c                  _ICN_getAndClear
+                  0x0052c0                  _ICN_clear
+ .text            0x0052e2        0x104 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/I2C2.o
+                  0x0052e2                  _Init_Master_I2C2
+                  0x00534a                  _CollisionReset_I2C2
+                  0x005352                  _OverflowReset_I2C2
+                  0x00535a                  _IsStartI2c2
+                  0x005366                  _IsCollisionDetectI2c2
+                  0x005372                  _IsStopI2c2
+                  0x00537e                  _IsReceiveBufferFullI2c2
+                  0x00538a                  _IsDataOrAddressI2c2
+                  0x005396                  _IsReceiveOverflowI2c2
+                  0x0053a2                  _Start_I2C2
+                  0x0053b4                  _Stop_I2C2
+                  0x0053c6                  _Write_I2C2
+                  0x0053d2                  _Read_I2C2
+ .text            0x0053e6        0x102 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/EMICBus.o
+                  0x0053e6                  _pI2C
+                  0x005402                  _pI2C_ctrl
+                  0x00541e                  _pI2C_boot
+                  0x00543e                  _EMICBus_init
+                  0x00544c                  _poll_EMICBus
+ .text            0x0054e8         0x86 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led2.o
+                  0x0054e8                  _LEDs_Led2_init
+                  0x0054f0                  _LEDs_Led2_blink
+                  0x005510                  _LEDs_Led2_poll
+ .text            0x00556e         0x86 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led3.o
+                  0x00556e                  _LEDs_Led3_init
+                  0x005576                  _LEDs_Led3_blink
+                  0x005596                  _LEDs_Led3_poll
+ .text            0x0055f4         0x86 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led4.o
+                  0x0055f4                  _LEDs_Led4_init
+                  0x0055fc                  _LEDs_Led4_blink
+                  0x00561c                  _LEDs_Led4_poll
+ .text            0x00567a         0x84 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt1.o
+                  0x00567a                  _Counter_Cnt1_init
+                  0x00568c                  _Counter_Cnt1_setTimeBase
+                  0x0056ae                  _Counter_Cnt1_setEdge
+                  0x0056bc                  _Counter_Cnt1_poll
+ .text            0x0056fe         0x84 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt2.o
+                  0x0056fe                  _Counter_Cnt2_init
+                  0x005710                  _Counter_Cnt2_setTimeBase
+                  0x005732                  _Counter_Cnt2_setEdge
+                  0x005740                  _Counter_Cnt2_poll
+ .text            0x005782         0x84 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt3.o
+                  0x005782                  _Counter_Cnt3_init
+                  0x005794                  _Counter_Cnt3_setTimeBase
+                  0x0057b6                  _Counter_Cnt3_setEdge
+                  0x0057c4                  _Counter_Cnt3_poll
+ .text            0x005806         0x84 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/userFncFile.o
+                  0x005806                  _onReset
+                  0x005836                  _Counter_Cnt1_onTimeBase
+                  0x005852                  _Counter_Cnt2_onTimeBase
+                  0x00586e                  _Counter_Cnt3_onTimeBase
+ .text            0x00588a         0x52 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Counter_Cnt4.o
+                  0x00588a                  _Counter_Cnt4_init
+                  0x00589c                  _Counter_Cnt4_poll
+ .text            0x0058dc         0x44 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/Digital.o
+                  0x0058dc                  _init_digIn
+                  0x0058ea                  _ReadDigiIn1
+                  0x0058f6                  _ReadDigiIn2
+                  0x005902                  _ReadDigiIn3
+                  0x00590e                  _ReadDigiIn4
+                  0x00591a                  _digInPoll
+ .text            0x005920         0x40 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/main.o
+                  0x005920                  _initSystem
+                  0x00592e                  _main
+ .text            0x005960         0x38 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Status.o
+                  0x005960                  _LEDs_Status_init
+                  0x005968                  _LEDs_Status_state
+ .text            0x005998         0x26 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/systemTimer.o
+                  0x005998                  _getSystemMilis
+                  0x0059a2                  _callback
+                  0x0059b4                  _systemTimeInit
+ .text            0x0059be         0x16 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/timer.o
+                  0x0059be                  _timer4_init
+ .text            0x0059d4          0x8 /root/Dropbox/EMIC/TARGETS/tomas.eze.caceres__gmail.com/DEA-KNG/HRD_X4I-DIGITAL-I_1/build/default/production/led_Led5.o
+                  0x0059d4                  _LEDs_Led5_init

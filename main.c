@@ -35,12 +35,8 @@ int main(void)
 	Counter_Cnt3_init();
 	Counter_Cnt4_init();
 	EMICBus_init();
-	onReset();
 	do
 	{
-		LEDs_Led2_poll();
-		LEDs_Led3_poll();
-		LEDs_Led4_poll();
 		digInPoll();
 		Counter_Cnt1_poll();
 		Counter_Cnt2_poll();
