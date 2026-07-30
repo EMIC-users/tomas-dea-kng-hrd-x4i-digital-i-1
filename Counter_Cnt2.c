@@ -19,9 +19,21 @@ void Counter_Cnt2_init(void)
 	cnt_ch = ICN_addChannel(CN_DigIn2, (uint16_t)(0x0001u << RPIN_DigIn2), ICN_EDGE_RISING);
 }
 
+void Counter_Cnt2_setTimeBase(uint16_t ms, char mode)
+{
+	cnt_window  = ms;
+	cnt_mode    = mode;
+	cnt_running = 1;
+	cnt_tStamp  = getSystemMilis();
+	ICN_clear(cnt_ch);
+}
 
 
 
+void Counter_Cnt2_setEdge(uint8_t edge)
+{
+	ICN_setEdge(cnt_ch, edge);
+}
 
 
 
@@ -36,7 +48,7 @@ void Counter_Cnt2_poll(void)
 			else
 				cnt_tStamp = getSystemMilis();  /* continuous: re-arm */
 
-			ICN_clear(cnt_ch);
+			Counter_Cnt2_onTimeBase(ICN_getAndClear(cnt_ch));
 		}
 	}
 }

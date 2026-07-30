@@ -12,7 +12,10 @@
 #include "streamIn.h"
 
 /* Function Prototypes */
+void onReset();
 void Counter_Cnt1_onTimeBase(uint32_t count);
+void Counter_Cnt2_onTimeBase(uint32_t count);
+void Counter_Cnt3_onTimeBase(uint32_t count);
 
 #endif /* USERFNCFILE_H */
 

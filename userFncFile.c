@@ -19,12 +19,44 @@
 #include "inc/EMICBus.h"
 
 /* User Variables */
-uint16_t rpm = 0;
+uint16_t rpmAib = 0;
+uint16_t rpmToma = 0;
+uint16_t rpmMotor = 0;
+
+void onReset()
+{
+    LEDs_Led2_blink(100, 400, 4);
+    Counter_Cnt1_setEdge(1);
+    Counter_Cnt1_setTimeBase(2000, 'A');
+    Counter_Cnt2_setEdge(1);
+    Counter_Cnt2_setTimeBase(2000, 'A');
+    Counter_Cnt3_setEdge(1);
+    Counter_Cnt3_setTimeBase(2000, 'A');
+    LEDs_Status_state(1);
+}
+
 
 void Counter_Cnt1_onTimeBase(uint32_t count)
 {
-    rpm = (uint16_t)(30 * count);
-    pI2C("RPMMOTOR\t%u", rpm);
+    LEDs_Led2_blink(60, 240, 1);
+    rpmMotor = (uint16_t)(30 * count);
+    pI2C("RPMMOTOR\t%u", rpmMotor);
+}
+
+
+void Counter_Cnt2_onTimeBase(uint32_t count)
+{
+    LEDs_Led3_blink(60, 240, 1);
+    rpmToma = (uint16_t)(30 * count);
+    pI2C("RPMTOMA\t%u", rpmToma);
+}
+
+
+void Counter_Cnt3_onTimeBase(uint32_t count)
+{
+    LEDs_Led4_blink(60, 240, 1);
+    rpmAib = (uint16_t)(30 * count);
+    pI2C("RPMAIB\t%u", rpmAib);
 }
 
 
