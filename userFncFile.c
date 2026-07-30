@@ -20,7 +20,7 @@
 
 void Counter_Cnt1_onTimeBase(uint32_t count)
 {
-    pI2C("RPMMOTOR\t%lu", count);
+    pI2C("RPMMOTOR");
 }
 
 
