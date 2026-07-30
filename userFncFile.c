@@ -20,8 +20,8 @@
 
 void Counter_Cnt1_onTimeBase(uint32_t count)
 {
-    // Unsupported element: emic-data-variable
-    pI2C("RPMMOTOR");
+    // Unsupported element: emic-program-variable
+    pI2C("RPMMOTOR\t%u", rpm);
 }
 
 
