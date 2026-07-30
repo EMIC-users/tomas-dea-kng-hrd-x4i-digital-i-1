@@ -18,8 +18,12 @@
 #include "inc/conversionFunctions.h"
 #include "inc/EMICBus.h"
 
+/* User Variables */
+uint16_t rpm = 0;
+
 void Counter_Cnt1_onTimeBase(uint32_t count)
 {
+    // Unsupported element: emic-data-variable
     pI2C("RPMMOTOR");
 }
 
